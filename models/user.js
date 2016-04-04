@@ -11,9 +11,7 @@ var playlistSchema = new mongoose.Schema({
 
 })
 
-
-
-
+//User model
 var userSchema = new Schema({
 	name: String,
 	email: String,
