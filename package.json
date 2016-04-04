@@ -1,0 +1,31 @@
+{
+  "name": "cover-drive",
+  "version": "1.0.0",
+  "description": "Cover Music Website",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dskaiser82/coverDrive.git"
+  },
+  "keywords": [
+    "Cover",
+    "Music",
+    "YouTube"
+  ],
+  "author": "Dan Kaiser",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dskaiser82/coverDrive/issues"
+  },
+  "homepage": "https://github.com/dskaiser82/coverDrive#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "mongoose": "^4.4.11",
+    "morgan": "^1.7.0",
+    "path": "^0.12.7"
+  }
+}
