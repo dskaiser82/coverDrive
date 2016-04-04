@@ -3,10 +3,25 @@
   <head>
     <meta charset="utf-8">
     <title>Cover Drive</title>
+
+    <!-- Materialize -->
     <link rel="stylesheet" type="text/css" href="/css/materialize.min.css">
 
+    <!-- DOWNLOADED LIBRARIES -->
+	<script src="/js/angular.js"></script>
+	<script src="/js/angular-ui-router.js"></script>
+  <script src="/js/mainCtrl.js"></script>
+
+  <!-- ANGULAR APP -->
+<script src="/js/app.js"></script>
+<!-- other angualr controllers here -->
+
   </head>
-  <body>
-<h1>Hello Mommy!!</h1>
+  <body ng-app="cover-drive">
+<h1>Hello Mommy!!</h1>  {{10+19}}
+
+      <div class="container">
+      		<div ui-view></div>
+      	</div>
   </body>
 </html>
