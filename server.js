@@ -4,6 +4,7 @@ var mongoose = require('mongoose');
 var logger = require('morgan');
 var path = require('path');
 var bodyParser = require('body-parser');
+var User = require('./models/User');
 // var apiRoutes = require('apiRoutes');
 
 //we'll need to switch this to mLab....

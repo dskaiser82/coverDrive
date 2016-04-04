@@ -6,7 +6,7 @@ var playlistSchema = new mongoose.Schema({
 	_by: {type: mongoose.Schema.Types.ObjectId, ref: "User"},
   song: String,
   artist: String,
-  cover-artist: String,
+  coverArtist: String,
   thumbnail: String
 
 })
