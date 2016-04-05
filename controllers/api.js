@@ -32,7 +32,8 @@ module.exports = {
 
         request(tubeUrl, function (error, response, body) {
       if (!error && response.statusCode == 200) {
-        res.json(body) // Show the HTML for the Google homepage.
+        var result = JSON.parse(body)
+        res.json(result) // Show the HTML for the Google homepage.
       }
     })
  }
