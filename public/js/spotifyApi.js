@@ -19,7 +19,6 @@
           //shows top 100 spotify - will need to get less
           console.log("Getting Spotify Charts")
           return $http.get('api/spotify')
-
         }
 
 
