@@ -1,10 +1,9 @@
 var express = require('express');
-var apiRouter = require('apiRouter');
-//need to make API CTRL
-//
+var apiRouter = express.Router()
+var apiCtrl = require('../controllers/api.js')
 
 apiRouter.route('/spotify')
-//fill when controller
+  .get(apiCtrl.index)
 
 
 apiRouter.route('/youtube')

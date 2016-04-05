@@ -5,7 +5,7 @@ var logger = require('morgan');
 var path = require('path');
 var bodyParser = require('body-parser');
 var User = require('./models/User');
-// var apiRoutes = require('apiRoutes');
+var apiRoutes = require('./routes/api.js')
 
 //we'll need to switch this to mLab....
 mongoose.connect('mongodb://localhost/cover-drive', function(err){
@@ -25,12 +25,7 @@ app.get('/', function(req,res){
 
 
 
-
-
-
-
-
-// app.use('/api', apiRoutes)
+app.use('/api', apiRoutes)
 
 
 ////==================Server Spinning==========================================
