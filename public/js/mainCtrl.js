@@ -9,12 +9,14 @@
 
     spotifyService.index()
       .success(function(results){
-        res.json(results)  //This is bringing an error  res not defined
+        console.log(results)
+          vm.spots = results.entries.items
       }) //end function spotifyService anonymous function
 
       tubeService.index()
         .success(function(results){
-          res.json(results) //This is bringing an error  res not defined
+          console.log(results)
+
         }) //end function spotifyService anonymous function
   } //end function MainController
 })() //enc
