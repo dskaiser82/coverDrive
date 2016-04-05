@@ -7,6 +7,7 @@ apiRouter.route('/spotify')
 
 
 apiRouter.route('/youtube')
-//fill when controller
+  .get(apiCtrl.indexTube)
+
 
 module.exports = apiRouter;
