@@ -19,6 +19,12 @@
       <script src="/js/tubeApi.js"></script>
 
 
+      <style>
+      .chart{
+        text-align: right;
+      }
+      </style>
+
 
   </head>
   <body ng-app="coverDrive">
@@ -46,7 +52,7 @@
           <!-- Spotify Chart  ==== spots gives us entries.items-->
         <div class="col s6">
           <h5>Top Songs</h5>
-          <ul>
+          <ul class="chart">
             <li > #1 <br><img src="{{main.spots[0].track.image.url}}"/></li>
             <li >{{ main.spots[0].track.name}}</li>
             <li >{{ main.spots[0].track.artists[0].name}}</li>
@@ -94,6 +100,7 @@
           </ul>
         </div>
     </div>
+
 
     </div>
 
