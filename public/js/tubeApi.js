@@ -15,7 +15,7 @@
 
         function index(){
           //shows top 100 spotify - will need to get less
-          console.log("Getting Spotify Charts")
+          console.log("Getting Youtube Charts")
           return $http.get('api/youtube')
         }
 
