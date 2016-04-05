@@ -7,9 +7,9 @@
 
       // my established routes
 			$stateProvider
-				.state('home', {
+				.state('artists', {
 					url: '/',
-					templateUrl: 'partials/home.html'
+					templateUrl: 'partials/artists.html'
 				})
 
 

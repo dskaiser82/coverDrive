@@ -36,19 +36,17 @@
     </nav>
 
     <!-- Main container -->
-    <div class="container">
+    <div ng-controller="MainController as main"  class="container">
       <div class="row">
         <!-- Youtube Thumbnails -->
-        <div class="col s6">
-            <ul>
-              <li></li>
-            </ul>
+        <div ui-view class="col s6">
+
         </div>
-        
+
           <!-- Spotify Chart-->
         <div class="col s6">
           <ul>
-            <li></li>
+            <li>This is the spotify listen</li>
           </ul>
         </div>
     </div>
