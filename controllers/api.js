@@ -9,23 +9,23 @@ module.exports = {
   //the YouTube API
   	index: function(req,res){
 
-      request({
-    url: spotUrl, //URL to hit
-    qs: {from: 'blog example', time: +new Date()}, //Query string data
-    method: 'POST',
-    //Lets post the following key/values as form
-    json: {
-        field1: 'data',
-        field2: 'data'
+          request({
+        url: spotUrl, //URL to hit
+        // qs: {from: 'blog example', time: +new Date()}, //Dont need this line
+        method: 'POST',
+        //Lets post the following key/values as form
+        json: {
+            // field1: 'data', //dont think you need these fields
+            // field2: 'data'
+        }
+    }, function(error, response, body){
+        if(error) {
+            console.log(error);
+        } else {
+            res.json(body)
     }
-}, function(error, response, body){
-    if(error) {
-        console.log(error);
-    } else {
-        res.json(body)
-}
-});
-  	}
+    });
+  } //end index
 
 
 
