@@ -23,6 +23,9 @@
       .chart{
         text-align: right;
       }
+      h5{
+        text-align: right;
+      }
       </style>
 
 
@@ -52,7 +55,7 @@
               <h5>Top Songs</h5>
                 <ul class="chart">
                     <li ng-repeat="hits in main.top10">
-                      <div> <br><img src="{{hits.track.image.url}}"</div>
+                      <div> #{{ hits.current_position }} <br><img src="{{hits.track.image.url}}"</div>
                       <div>{{ hits.track.name }}</div>
                       <div>{{ hits.top10[0].track.artists[0].name }}</div>
                         <hr>
