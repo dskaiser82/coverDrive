@@ -9,8 +9,8 @@
 
     spotifyService.index()
       .success(function(results){
-        console.log(results)
-  			vm.users = results   //what does this do?
+        res.json(results)
+  		 //what does this do?
       }) //end function spotifyService anonymous function
   } //end function MainController
 })() //enc
