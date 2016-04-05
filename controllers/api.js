@@ -1,7 +1,7 @@
 var request = require('request');
 var User = require('../models/User.js');
 var spotUrl =  "https://spotifycharts.com/api/?type=regional&country=global&recurrence=daily&date=latest&limit=30&offset=0";
-var tubeUrl = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=rihanna+work+cover&key=AIzaSyDgxPMAszxU1vjw7E3QQoHLNLHLYjWXc14"
+var tubeUrl = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=rihanna+work+cover&key=AIzaSyDgxPMAszxU1vjw7E3QQoHLNLHLYjWXc14"  //this works on its own
 
 
 module.exports = {
@@ -30,23 +30,12 @@ module.exports = {
 
   indexTube: function(req,res){
 
-        request({
-      url: spotUrl, //URL to hit  >>>> This needs to be tubeURL but getting bug
-      // qs: {from: 'blog example', time: +new Date()}, //Dont need this line
-      method: 'POST',
-      //Lets post the following key/values as form
-      json: {
-          // field1: 'data', //dont think you need these fields
-          // field2: 'data'
+        request(tubeUrl, function (error, response, body) {
+      if (!error && response.statusCode == 200) {
+        res.json(body) // Show the HTML for the Google homepage.
       }
-  }, function(error, response, body){
-      if(error) {
-          console.log(error);
-      } else {
-          res.json(body)
-  }
-  });
-} //end indexSpot
+    })
+ }
 
 
 

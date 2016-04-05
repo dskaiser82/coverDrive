@@ -10,7 +10,7 @@
     spotifyService.index()
       .success(function(results){
         res.json(results)
-      }), //end function spotifyService anonymous function
+      }) //end function spotifyService anonymous function
 
       tubeService.index()
         .success(function(results){
