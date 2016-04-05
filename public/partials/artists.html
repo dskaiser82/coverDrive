@@ -1,13 +1,14 @@
 
-<ul>
-  <li>{{main.covers[0].snippet.channelTitle}}</li>
-  <li>{{main.covers[0].snippet.title}}</li>
-  <li><img src="{{main.covers[0].snippet.thumbnails.medium.url}}"/></li>
+<!-- main.covers[x] is whats repeating -->
+<ul ng-repeat="videos in main.covers">  
+  <li >{{videos.snippet.channelTitle}}</li>
+  <li>{{videos.snippet.title}}</li>
+  <li><img src="{{videos.snippet.thumbnails.medium.url}}"/></li>
 </ul>
 
-<iframe type="text/html"
+<!-- <iframe type="text/html"
     width="640"
     height="385"
     src="http://www.youtube.com/embed/6AwdSFjfzP4"
     frameborder="0">
-</iframe>
+</iframe> -->
