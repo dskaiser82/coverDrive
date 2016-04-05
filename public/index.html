@@ -45,64 +45,24 @@
     <div ng-controller="MainController as main"  class="container">
       <div class="row">
         <!-- Youtube Thumbnails -->
-        <div ui-view class="col s6">
+        <div ui-view class="col s6"></div>
 
-        </div>
-
-          <!-- Spotify Chart  ==== top10 gives us entries.items-->
-        <div class="col s6">
-          <h5>Top Songs</h5>
-          <ul class="chart">
-            <li > #1 <br><img src="{{main.top10[0].track.image.url}}"/></li>
-            <li >{{ main.top10[0].track.name}}</li>
-            <li >{{ main.top10[0].track.artists[0].name}}</li>
-              <hr>
-            <li >#2<br> <img src="{{main.top10[1].track.image.url}}"/></li>
-            <li >{{ main.top10[1].track.name}}</li>
-            <li >{{ main.top10[1].track.artists[0].name}}</li>
-              <hr>
-          <li >#3<br> <img src="{{main.top10[2].track.image.url}}"/></li>
-          <li >{{ main.top10[2].track.name}}</li>
-          <li >{{ main.top10[2].track.artists[0].name}}</li>
-            <hr>
-          <li >#4<br> <img src="{{main.top10[3].track.image.url}}"/></li>
-          <li >{{ main.top10[3].track.name}}</li>
-          <li >{{ main.top10[3].track.artists[0].name}}</li>
-          <hr>
-        <li >#5<br> <img src="{{main.top10[4].track.image.url}}"/></li>
-        <li >{{ main.top10[4].track.name}}</li>
-        <li >{{ main.top10[4].track.artists[0].name}}</li>
-          <hr>
-        <li >#5<br> <img src="{{main.top10[4].track.image.url}}"/></li>
-        <li >{{ main.top10[4].track.name}}</li>
-        <li >{{ main.top10[4].track.artists[0].name}}</li>
-          <hr>
-        <li >#6<br> <img src="{{main.top10[5].track.image.url}}"/></li>
-        <li >{{ main.top10[5].track.name}}</li>
-        <li >{{ main.top10[5].track.artists[0].name}}</li>
-          <hr>
-        <li >#7<br> <img src="{{main.top10[6].track.image.url}}"/></li>
-        <li >{{ main.top10[6].track.name}}</li>
-        <li >{{ main.top10[6].track.artists[0].name}}</li>
-          <hr>
-        <li >#8<br> <img src="{{main.top10[7].track.image.url}}"/></li>
-        <li >{{ main.top10[7].track.name}}</li>
-        <li >{{ main.top10[7].track.artists[0].name}}</li>
-          <hr>
-        <li >#9<br> <img src="{{main.top10[8].track.image.url}}"/></li>
-        <li >{{ main.top10[8].track.name}}</li>
-        <li >{{ main.top10[8].track.artists[0].name}}</li>
-          <hr>
-        <li >#10<br> <img src="{{main.top10[9].track.image.url}}"/></li>
-        <li >{{ main.top10[9].track.name}}</li>
-        <li >{{ main.top10[9].track.artists[0].name}}</li>
-
-          </ul>
-        </div>
-    </div>
+            <!-- Spotify Chart  ==== top10 gives us entries.items-->
+          <div class="col s6">
+              <h5>Top Songs</h5>
+                <ul class="chart">
+                    <li ng-repeat="hits in main.top10">
+                      <div> <br><img src="{{hits.track.image.url}}"</div>
+                      <div>{{ hits.track.name }}</div>
+                      <div>{{ hits.top10[0].track.artists[0].name }}</div>
+                        <hr>
+                    </li>
+                </ul>
+              </div>
+          </div>
 
 
-    </div>
+      </div>
 
 
 
