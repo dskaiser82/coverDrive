@@ -1,10 +1,13 @@
 
 <!-- main.covers[x] is whats repeating -->
-<ul ng-repeat="videos in main.covers">  
-  <li >{{videos.snippet.channelTitle}}</li>
-  <li>{{videos.snippet.title}}</li>
-  <li><img src="{{videos.snippet.thumbnails.medium.url}}"/></li>
+<ul>
+  <li ng-repeat="video in main.covers">
+    <div >{{video.snippet.channelTitle}}</div>
+    <div>{{video.snippet.title}}</div>
+    <div><img src="{{video.snippet.thumbnails.medium.url}}"/></div>
+  </li>
 </ul>
+
 
 <!-- <iframe type="text/html"
     width="640"
