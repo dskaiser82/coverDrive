@@ -9,15 +9,22 @@ module.exports = {
   //the YouTube API
   	index: function(req,res){
 
-      request(spotUrl, function (error, response, body) {
-        if (!error && response.statusCode == 200) {
-          res.json(body) // Show the HTML for the Google homepage.
-          console.log("Test")
-        }
-      })
-
-        // // res.json({message:"hello from my api index"})
-  			// res.json(results)
+      request({
+    url: spotUrl, //URL to hit
+    qs: {from: 'blog example', time: +new Date()}, //Query string data
+    method: 'POST',
+    //Lets post the following key/values as form
+    json: {
+        field1: 'data',
+        field2: 'data'
+    }
+}, function(error, response, body){
+    if(error) {
+        console.log(error);
+    } else {
+        res.json(body)
+}
+});
   	}
 
 
