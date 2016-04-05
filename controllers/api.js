@@ -7,7 +7,7 @@ module.exports = {
 
   // show spotify on api/spotify....we will to add here, not to mention
   //the YouTube API
-  	index: function(req,res){
+  	indexSpot: function(req,res){
 
           request({
         url: spotUrl, //URL to hit

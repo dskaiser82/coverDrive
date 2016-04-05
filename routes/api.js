@@ -3,7 +3,7 @@ var apiRouter = express.Router()
 var apiCtrl = require('../controllers/api.js')
 
 apiRouter.route('/spotify')
-  .get(apiCtrl.index)
+  .get(apiCtrl.indexSpot)
 
 
 apiRouter.route('/youtube')
