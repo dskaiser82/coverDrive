@@ -19,7 +19,7 @@
 
       tubeService.index()
         .success(function(results){
-          console.log(results)
+          console.log("Hi Danny")
           //we name covers and set the api object to results.items
           //to easily bind on front-end
             vm.covers = results.items

@@ -29,14 +29,12 @@ module.exports = {
   }, //end indexSpot
 
   indexTube: function(req,res){
-    console.log(results)
-    // var tubeUrl = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q"+req.params.artist+req.params.song+cover "&key=AIzaSyDgxPMAszxU1vjw7E3QQoHLNLHLYjWXc14"
-
+  
 
         request(tubeUrl, function (error, response, body) {
       if (!error && response.statusCode == 200) {
-        var result = JSON.parse(body)
-        res.json(result) // Show the HTML for the Google homepage.
+        var results = JSON.parse(body)
+        res.json(results) // Show the HTML for the Google homepage.
       }
     })
  }
