@@ -1,5 +1,5 @@
 (function(){
-  // angular.module('spotifyApi', [])
+
   angular.module('coverDrive')
     .factory('spotifyService', spotifyService)
 
@@ -14,10 +14,17 @@
         return service
 
         function index(){
-          //shows top 100 spotify - will need to get less
+          //shows top 100 spotify
           console.log("Getting Spotify Charts")
           return $http.get('api/spotify')
         }
+
+        // function show(){
+        //   return $http.get('')
+        // }
+
+
+
 
 
       } //end function

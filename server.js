@@ -7,10 +7,13 @@ var bodyParser = require('body-parser');
 var User = require('./models/User');
 var apiRoutes = require('./routes/api.js')
 
+var port =  process.env.PORT || 3000
+
+var DB_URL = process.env.MLAB_LINK || 'mongodb://localhost/cover-drive'
 //we'll need to switch this to mLab....
-mongoose.connect('mongodb://localhost/cover-drive', function(err){
+mongoose.connect(DB_URL, function(err){
 	if(err) throw err
-	console.log('Connected to MongoDB (Aww Yeeahh!!!)! ')
+	console.log(DB_URL)
 })
 
 app.use(bodyParser.urlencoded({extended:false}))
@@ -29,6 +32,6 @@ app.use('/api', apiRoutes)
 
 
 ////==================Server Spinning==========================================
-app.listen(3000, function(){
-  console.log('Server is spinning on 3000')
+app.listen(port, function(){
+  console.log('Server is spinning' + port)
 })
