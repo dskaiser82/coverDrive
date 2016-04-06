@@ -38,13 +38,10 @@
       <div class="nav-wrapper">
         <a href="#" class="brand-logo center">Logo</a>
         <ul id="nav-mobile" class="left hide-on-med-and-down">
-          <li><a href="sass.html">Sass</a></li>
-          <li><a href="badges.html">Components</a></li>
-          <li><a href="collapsible.html">JavaScript</a></li>
           <li ng-if="!global.isAuthed()"><a ui-sref="login">Log In</a></li>
           <li ng-if="global.isAuthed()"><a ng-click="global.logout()">Log Out</a></li>
 
-          <li>{{ global.isAuthed() }}</li>
+          <!-- <li>{{ global.isAuthed() }}</li> -->
         </ul>
       </div>
     </nav>

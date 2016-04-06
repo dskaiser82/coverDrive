@@ -20,7 +20,7 @@
     vm.title = "The Global Controller"
     console.log(vm.title)
 
-
+    //Handles Code on Login 
     function handleRequest(res) {
       var token = res.data ? res.data.token : null;
       if(token) {
