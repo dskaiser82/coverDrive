@@ -44,14 +44,14 @@ module.exports = {
    req.query.search
 
 
-   var searchUrl = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q="+req.query.search+"+cover&key=AIzaSyDgxPMAszxU1vjw7E3QQoHLNLHLYjWXc14"
+   var searchUrl = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q="+req.query.search+"+cover+-performs&order=relevance&topicId=music+cover&key=AIzaSyDgxPMAszxU1vjw7E3QQoHLNLHLYjWXc14"
    console.log(searchUrl)
    request(searchUrl, function(err, response, body){
      console.log(body)
      res.json(JSON.parse(body))
    })
  }
-
+//+-presents+-vevo+-coverhook+-pranks+-parody+-amazing+-shazam+-lyrics+-playlist
 
 
 
