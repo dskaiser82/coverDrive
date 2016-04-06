@@ -6,6 +6,7 @@
 
   function MainController (spotifyService, tubeService, $state){
     var vm = this
+    vm.api = tubeService
 
     spotifyService.index()
       .success(function(results){
@@ -26,10 +27,10 @@
 
         }) //end function spotifyService anonymous function
 
-        vm.getYouTube = function(artist, title, tubeService){
+        vm.getYouTube = function(artist, title){
           var query = artist + "+" + title;
           console.log(query);
-          tubeService.search(query)
+          vm.api.search(query)
         }
   } //end function MainController
 })() //enc
