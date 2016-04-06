@@ -29,7 +29,7 @@ module.exports = {
   }, //end indexSpot
 
   indexTube: function(req,res){
-  
+
 
         request(tubeUrl, function (error, response, body) {
       if (!error && response.statusCode == 200) {
@@ -37,6 +37,12 @@ module.exports = {
         res.json(results) // Show the HTML for the Google homepage.
       }
     })
+ }, // end indext tubeUrl
+
+
+ showTube: function(req,res){
+   req.query.search
+   request("https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q="+req.query.search+"+cover&key=AIzaSyDgxPMAszxU1vjw7E3QQoHLNLHLYjWXc14")
  }
 
 

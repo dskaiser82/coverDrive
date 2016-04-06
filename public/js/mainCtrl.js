@@ -24,8 +24,12 @@
           //to easily bind on front-end
             vm.covers = results.items
 
-
-
         }) //end function spotifyService anonymous function
+
+        vm.getYouTube = function(artist, title, tubeService){
+          var query = artist + "+" + title;
+          console.log(query);
+          tubeService.search(query)
+        }
   } //end function MainController
 })() //enc
