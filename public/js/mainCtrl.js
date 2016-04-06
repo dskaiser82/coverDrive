@@ -30,7 +30,10 @@
         vm.getYouTube = function(artist, title){
           var query = artist + "+" + title;
           console.log(query);
-          vm.api.search(query)
+          vm.api.search(query).success(function(results){
+            vm.covers = results.items
+            console.log(vm.covers)
+          })
         }
   } //end function MainController
 })() //enc

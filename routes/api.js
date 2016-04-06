@@ -7,7 +7,8 @@ apiRouter.route('/spotify')
 
 
 apiRouter.route('/youtube')
-  .get(apiCtrl.indexTube)
+  .get(apiCtrl.showTube)
+
 
 
 module.exports = apiRouter;
