@@ -1,11 +1,34 @@
 var request = require('request');
 var User = require('../models/User.js');
+var jwt = require('jsonwebtoken');
 var spotUrl =  "https://spotifycharts.com/api/?type=regional&country=global&recurrence=daily&date=latest&limit=10";
 var tubeUrl = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=rihanna+work+cover&key=AIzaSyDgxPMAszxU1vjw7E3QQoHLNLHLYjWXc14"  //this works on its own
 
 
 module.exports = {
 
+  // index of users:
+    index: function(req,res){
+      User.find({}, function(err, users){
+        if(err) return console.log(err)
+        res.json(users)
+      })
+    },
+
+  // create a user:
+    create: function(req,res){
+      User.create(req.body, function(err, user){
+        if(err) return console.log(err)
+        res.json(user)
+      })
+    },
+
+    showUser: function(req,res){
+      User.findOne({_id: req.params.id}, function(err, user){
+        if(err) return console.log(err)
+        res.json(user)
+      })
+    },
   // show spotify on api/spotify....we will to add here, not to mention
   //the YouTube API
   	indexSpot: function(req,res){
@@ -50,9 +73,38 @@ module.exports = {
      console.log(body)
      res.json(JSON.parse(body))
    })
- }
+ },
 //+-presents+-vevo+-coverhook+-pranks+-parody+-amazing+-shazam+-lyrics+-playlist
 
+// runs when a user tries to log in
+authenticate: function(req,res){
+  User.findOne({email: req.body.email}, function(err, user){
+    if(err) return console.log(err)
+    if(!user) return res.json({success: false, message: "No user found :("})
+    if(user && user.password != req.body.password) return res.json({success: false, message: "Wrong password :("})
+
+    var token = jwt.sign(user.toObject(), process.env.SECRET, {
+      expiresInMinutes: 1440
+    })
+
+    res.json({success: true, message: "You gots da token", token: token})
+
+  })
+},
+
+// this method runs as middleware BEFORE a user tries to access a protected route:
+protect: function(req, res, next){
+  var token = req.body.token || req.query.token || req.headers['x-access-token']
+  if(token){
+    jwt.verify(token, process.env.SECRET, function(err, decoded){
+      if(err) return res.json({success:false, message: "Failed to verify token :("})
+      req.decoded = decoded
+      next()
+    })
+  } else {
+    return res.status(403).json({success: false, message: "No token provided :("})
+  }
+}
 
 
 } //end

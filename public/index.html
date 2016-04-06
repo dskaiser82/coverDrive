@@ -14,6 +14,7 @@
 
       <!-- ANGULAR APP -->
       <script src="/js/app.js"></script>
+      <script src="/js/globalCtrl.js"></script>
       <script src="/js/mainCtrl.js"></script>
       <script src="/js/spotifyApi.js"></script>
       <script src="/js/tubeApi.js"></script>
@@ -30,7 +31,7 @@
 
 
   </head>
-  <body ng-app="coverDrive">
+  <body ng-app="coverDrive" ng-controller="GlobalController as global">
 
     <!-- Nav Bar -->
     <nav>
@@ -40,6 +41,10 @@
           <li><a href="sass.html">Sass</a></li>
           <li><a href="badges.html">Components</a></li>
           <li><a href="collapsible.html">JavaScript</a></li>
+          <li ng-if="!global.isAuthed()"><a ui-sref="login">Log In</a></li>
+          <li ng-if="global.isAuthed()"><a ng-click="global.logout()">Log Out</a></li>
+
+          <li>{{ global.isAuthed() }}</li>
         </ul>
       </div>
     </nav>

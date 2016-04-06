@@ -4,18 +4,21 @@ var mongoose = require('mongoose');
 var logger = require('morgan');
 var path = require('path');
 var bodyParser = require('body-parser');
+var dotenv = require('dotenv').load({silent: true});
 var User = require('./models/User');
 var apiRoutes = require('./routes/api.js')
 
 var port =  process.env.PORT || 3000
 
 var DB_URL = process.env.MLAB_LINK || 'mongodb://localhost/cover-drive'
+
 //we'll need to switch this to mLab....
 mongoose.connect(DB_URL, function(err){
 	if(err) throw err
-	console.log(DB_URL)
+	console.log("Mongo database connected to", DB_URL)
 })
 
+app.use(logger('dev'))
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
 app.use(express.static(path.join(__dirname, 'public')))

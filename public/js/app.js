@@ -11,7 +11,15 @@
 					url: '/',
 					templateUrl: 'partials/artists.html'
 				})
-
+        .state('login', {
+					url: '/login',
+					templateUrl: 'partials/login.html'
+				})
+        // $stateProvider
+        //   .state('artists', {
+        //     url: '/',
+        //     templateUrl: 'partials/artists.html'
+        //   })
 
     })
 })() //end
