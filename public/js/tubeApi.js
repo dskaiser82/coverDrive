@@ -18,6 +18,7 @@
           console.log("Getting Youtube Charts")
           return $http.get('api/youtube')  //+ query)
         }
+        
         function search(query){
           console.log("yyyesssss")
           return $http.get("/api/youtube?search="+query)
