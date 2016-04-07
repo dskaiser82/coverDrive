@@ -20,6 +20,7 @@
 					url: '/signup',
 					templateUrl: 'partials/signup.html'
 				})
+        //to play the video
         .state('videoplay', {
           url: '/videoplay/:videoId',
           templateUrl: 'partials/videoplay.html',
