@@ -44,7 +44,10 @@
 
           vm.videoUrl = "https://www.youtube.com/embed/" + videoId
           console.log(vm.videoUrl, "This is the url")
+
+          vm.videoId = videoId
           }
+
 
           // vm.paramsVideo = function(){
           //     console.log($stateParams.videoId)
