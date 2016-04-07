@@ -20,7 +20,7 @@
     vm.title = "The Global Controller"
     console.log(vm.title)
 
-    //Handles Code on Login 
+///////////Handles Code on Login
     function handleRequest(res) {
       var token = res.data ? res.data.token : null;
       if(token) {
@@ -36,9 +36,12 @@
       user.login(vm.loginUser.email, vm.loginUser.password)
         .then(handleRequest, handleRequest)
     }
+    //Register is my sign up
     vm.register = function() {
-      user.register(vm.loginUser.email, vm.loginUser.password)
+      user.register(vm.registerUser.email, vm.registerUser.password)
         .then(handleRequest, handleRequest)
+        $state.go('login')
+        alert('Thanks for signing up!  Please login.')
     }
     vm.logout = function() {
       user.logout && user.logout()
@@ -53,7 +56,7 @@
 
 
 
-  // BREAK THIS OUT LATER:
+
 
 
   function authInterceptor(API, auth) {
@@ -115,7 +118,15 @@
           email: email,
           password: password
         })
-    };
+    }
+
+    self.register = function(email, password) {
+      return $http.post(API + '/users', {
+          email: email,
+          password: password
+        })
+
+    }
 
     self.logout = function() {
       $window.localStorage.removeItem('jwtToken');

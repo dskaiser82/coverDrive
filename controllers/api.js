@@ -6,7 +6,7 @@ var tubeUrl = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResu
 
 
 module.exports = {
-
+//======================USERS==================================================
   // index of users:
     index: function(req,res){
       User.find({}, function(err, users){
@@ -29,6 +29,8 @@ module.exports = {
         res.json(user)
       })
     },
+
+//======================Spotify and YouTube=====================================
   // show spotify on api/spotify....we will to add here, not to mention
   //the YouTube API
   	indexSpot: function(req,res){
@@ -75,6 +77,9 @@ module.exports = {
    })
  },
 //+-presents+-vevo+-coverhook+-pranks+-parody+-amazing+-shazam+-lyrics+-playlist
+
+
+//============================Authentication===================================
 
 // runs when a user tries to log in
 authenticate: function(req,res){
