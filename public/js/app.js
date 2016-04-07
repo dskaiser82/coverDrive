@@ -3,12 +3,12 @@
     .config(function($stateProvider, $urlRouterProvider){
 
       // handle any attempts to routes other than what's listed below:
-      $urlRouterProvider.otherwise('/')
+      $urlRouterProvider.otherwise('/home.html')
 
       // my established routes
 			$stateProvider
 				.state('artists', {
-					url: '/',
+					url: '/artists',
 					templateUrl: 'partials/artists.html',
           // already have a controller set in index.html controller:'MainController as theController'
 				})
