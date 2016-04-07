@@ -35,5 +35,13 @@
             console.log(vm.covers)
           })
         }
+
+        vm.getVideoId = function(videoId){
+            console.log(videoId)
+            // $state.go('/login',{"experience":experience_id,"context":'login'});
+          $state.go("videoplay", {"videoId":videoId})
+            console.log(videoId)
+          }
+
   } //end function MainController
 })() //enc

@@ -9,7 +9,8 @@
 			$stateProvider
 				.state('artists', {
 					url: '/',
-					templateUrl: 'partials/artists.html'
+					templateUrl: 'partials/artists.html',
+          controller:'MainController as theController'
 				})
         .state('login', {
 					url: '/login',
@@ -19,6 +20,11 @@
 					url: '/signup',
 					templateUrl: 'partials/signup.html'
 				})
+        .state('videoplay', {
+          url: '/videoplay/:videoId',
+          templateUrl: 'partials/videoplay.html',
+          controller:'MainController as theController'
+        })
 
     })
 })() //end

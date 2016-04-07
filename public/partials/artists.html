@@ -4,7 +4,11 @@
   <li ng-repeat="video in main.covers">
     <div >{{video.snippet.channelTitle}}</div>
     <div>{{video.snippet.title}}</div>
-    <div><img src="{{video.snippet.thumbnails.medium.url}}"/></div>
+    <div>{{video.id.videoId}}</div>
+    <button ng-click="theController.getVideoId(video.id.videoId)"><img src="{{video.snippet.thumbnails.medium.url}}"></button>
+
+
+
   </li>
 </ul>
 
