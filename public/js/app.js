@@ -3,7 +3,7 @@
     .config(function($stateProvider, $urlRouterProvider){
 
       // handle any attempts to routes other than what's listed below:
-      $urlRouterProvider.otherwise('/artists')
+      $urlRouterProvider.otherwise('/home.html')
 
       // my established routes
 			$stateProvider

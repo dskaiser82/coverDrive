@@ -28,7 +28,7 @@
             vm.covers = results.items
         }) //end function spotifyService anonymous function
 
-        //For Clicking on Spotigy chart and capturing artist name+title
+        //For Clicking on spotify chart and capturing artist name+title
         vm.getYouTube = function(artist, title){
           var query = artist + "+" + title;
           console.log(query);
@@ -37,7 +37,8 @@
             console.log(vm.covers)
           })
         }
-        //For videoplay/:videoId
+
+//////////////////////For videoplay/:videoId///////////////////////////////////
         vm.getVideoId = function(videoId){
             console.log(videoId)
             // vm.videoId=videoId
@@ -47,8 +48,8 @@
               console.log(vm.videoUrl, "This is the url")
 
               }
-        //its own function to have Youtube url as trusted search
-        //ONLY works this way
+        //for Videoplay/video:id its own function to have Youtube
+        //url as trusted search ONLY works this way
         vm.trustSrc = function(src){
           return $sce.trustAsResourceUrl(src)
         }
