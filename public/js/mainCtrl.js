@@ -42,15 +42,13 @@
             console.log(videoId)
             // vm.videoId=videoId
           $state.go("videoplay", {"videoId":videoId})
-            console.log(videoId)
+              //we use to get distict youtube videos.  Use with trustSrc
+              vm.videoUrl = "https://www.youtube.com/embed/" + videoId
+              console.log(vm.videoUrl, "This is the url")
 
-          vm.videoUrl = "https://www.youtube.com/embed/" + videoId
-          console.log(vm.videoUrl, "This is the url")
-
-          //
-          vm.videoId = videoId
-          }
-
+              }
+        //its own function to have Youtube url as trusted search
+        //ONLY works this way
         vm.trustSrc = function(src){
           return $sce.trustAsResourceUrl(src)
         }
@@ -61,4 +59,4 @@
 
 
   } //end function MainController
-})() //enc
+})() //end
