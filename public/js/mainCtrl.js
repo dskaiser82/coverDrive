@@ -35,7 +35,7 @@
             console.log(vm.covers)
           })
         }
-
+        //For videoplay/:videoId
         vm.getVideoId = function(videoId){
             console.log(videoId)
             // $state.go('/login',{"experience":experience_id,"context":'login'});
