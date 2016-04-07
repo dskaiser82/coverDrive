@@ -8,6 +8,7 @@
     var vm = this
     vm.api = tubeService
 
+/////////////////////////SPOTIFY API////////////////////////////////////////////
     spotifyService.index()
       .success(function(results){
         console.log(results)
@@ -18,15 +19,16 @@
           console.log(vm.top10)
       }) //end function spotifyService anonymous function
 
+/////////////////////////youtube API////////////////////////////////////////////
       tubeService.index()
         .success(function(results){
           console.log("Hi Danny")
           //we name covers and set the api object to results.items
           //to easily bind on front-end
             vm.covers = results.items
-
         }) //end function spotifyService anonymous function
 
+        //For Clicking on Spotigy chart and capturing artist name+title
         vm.getYouTube = function(artist, title){
           var query = artist + "+" + title;
           console.log(query);
@@ -36,7 +38,7 @@
           })
         }
         //For videoplay/:videoId
-        vm.getVideoId = function(videoId){
+        vm.getVideoId = function(videoId, $sce){
             console.log(videoId)
             // vm.videoId=videoId
           $state.go("videoplay", {"videoId":videoId})
@@ -45,14 +47,14 @@
           vm.videoUrl = "https://www.youtube.com/embed/" + videoId
           console.log(vm.videoUrl, "This is the url")
 
+          // vm.trustedUrl = $sce.trustAsResourceUrl(vm.videoUrl)
+          //
+
           vm.videoId = videoId
           }
 
 
-          // vm.paramsVideo = function(){
-          //     console.log($stateParams.videoId)
-          //
-          //   }
+
 
   } //end function MainController
 })() //enc

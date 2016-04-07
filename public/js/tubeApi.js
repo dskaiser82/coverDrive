@@ -13,12 +13,14 @@
         } // end var service
         return service
 
-        function index(){  //try add argument query
-          //shows top 100 spotify - will need to get less
+
+        //we use search below to really get the youtube jpegs
+        function index(){
+
           console.log("Getting Youtube Charts")
           return $http.get('api/youtube')  //+ query)
         }
-        
+
         function search(query){
           console.log("yyyesssss")
           return $http.get("/api/youtube?search="+query)
