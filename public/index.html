@@ -55,7 +55,7 @@
         <div ui-view class="col s6"></div>
 
             <!-- Spotify Chart  ==== top10 gives us entries.items-->
-          <div class="col s6">
+          <div ui-sref="artists" class="col s6">
               <h5>Top Songs</h5>
                 <ul class="chart">
                     <li ng-repeat="hits in main.top10">
