@@ -2,9 +2,9 @@
   angular.module('coverDrive')
     .controller('MainController', MainController)
 
-  MainController.$inject = ['spotifyService', 'tubeService', '$state']
+  MainController.$inject = ['spotifyService', 'tubeService', '$state', '$stateParams']
 
-  function MainController (spotifyService, tubeService, $state){
+  function MainController (spotifyService, tubeService, $state, $stateParams){
     var vm = this
     vm.api = tubeService
 
@@ -38,10 +38,18 @@
         //For videoplay/:videoId
         vm.getVideoId = function(videoId){
             console.log(videoId)
-            // $state.go('/login',{"experience":experience_id,"context":'login'});
+            // vm.videoId=videoId
           $state.go("videoplay", {"videoId":videoId})
             console.log(videoId)
+
+          vm.videoUrl = "https://www.youtube.com/embed/" + videoId
+          console.log(vm.videoUrl, "This is the url")
           }
+
+          // vm.paramsVideo = function(){
+          //     console.log($stateParams.videoId)
+          //
+          //   }
 
   } //end function MainController
 })() //enc

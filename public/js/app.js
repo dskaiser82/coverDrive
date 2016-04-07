@@ -10,7 +10,7 @@
 				.state('artists', {
 					url: '/',
 					templateUrl: 'partials/artists.html',
-          controller:'MainController as theController'
+          // already have a controller set in index.html controller:'MainController as theController'
 				})
         .state('login', {
 					url: '/login',
@@ -23,7 +23,7 @@
         .state('videoplay', {
           url: '/videoplay/:videoId',
           templateUrl: 'partials/videoplay.html',
-          controller:'MainController as theController'
+          //already have a controller set in index.html controller:'MainController as theController'
         })
 
     })
