@@ -5,7 +5,7 @@ var logger = require('morgan');
 var path = require('path');
 var bodyParser = require('body-parser');
 var dotenv = require('dotenv').load({silent: true});
-var User = require('./models/User');
+var User = require('./models/user.js');
 var apiRoutes = require('./routes/api.js')
 
 var port =  process.env.PORT || 3000
