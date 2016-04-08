@@ -1,7 +1,7 @@
 ![Image](http://mlewislogic.com/wp-content/uploads/2011/05/ga.png)
 # DisCoveree
 ## WDI_SM_21 Project Four
-Live Site: https://cover-drive.herokuapp.com/
+Live Site: https://cover-drive.herokuapp.com/ <br>
 Trello: https://trello.com/b/fO5L3lru/project-4-cover-drive
 
 > Discoveree is an online platform highlighting top YouTube cover artists covering hit songs.
