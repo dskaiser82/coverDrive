@@ -21,9 +21,7 @@
       <script src="/js/tubeApi.js"></script>
 
 
-      <style>
 
-      </style>
 
 
   </head>
@@ -32,7 +30,7 @@
     <!-- Nav Bar -->
     <nav>
       <div class="nav-wrapper">
-        <a href="/#/" class="brand-logo center">Logo</a>
+        <a href="/#/" class="brand-logo center"><img class="logo" src="/images/cover-drive-logo-w.png"></a>
         <ul id="nav-mobile" class="left hide-on-med-and-down">
           <li ng-if="!global.isAuthed()"><a ui-sref="login">Log In</a></li>
           <li ng-if="!global.isAuthed()"><a ui-sref="signup">Sign Up</a></li>
@@ -57,10 +55,10 @@
               <h5>Top Songs</h5>
                 <ul class="chart">
                     <li ng-repeat="hits in main.top10">
-                      <div><a ng-click="main.getYouTube(hits.track.artists[0].name,hits.track.name)"> #{{ hits.current_position }} <br><img src="{{hits.track.image.url}}"</a></div>
+                      <div><a class="num" ng-click="main.getYouTube(hits.track.artists[0].name,hits.track.name)">
+                       #{{ hits.current_position }} <br><img src="{{hits.track.image.url}}"</a></div>
                       <div class="track-name" >{{ hits.track.name }}</div>
                       <div class="artist-name">{{ hits.track.artists[0].name }}</div>
-
                     </li>
                 </ul>
             </div>

@@ -4,12 +4,19 @@
 .nav-wrapper{
   background: #d32f2f;
 }
+.logo{
+  width: 365px;
+  height: auto;
+}
 h5{
   text-align: right;
 }
-a{
+.num{
   background-color: #d32f2f;
   color: white;
+}
+.button{
+  background-color: : #d32f2f;
 }
 
 .track-name{
