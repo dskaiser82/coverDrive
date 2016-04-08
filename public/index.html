@@ -48,7 +48,9 @@
 
       <div class="row">
         <!-- Youtube Thumbnails -->
-        <div ui-view autoscroll="true" class="col s6"></div>
+        <div style="min-height:1px" class="col s6">
+          <div ui-view autoscroll="true" ></div>
+        </div>
 
             <!-- Spotify Chart  ==== top10 gives us entries.items-->
           <div ui-sref="artists" class="col s6">
