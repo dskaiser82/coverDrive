@@ -4,8 +4,8 @@
 Live Site: https://cover-drive.herokuapp.com/ <br>
 Trello: https://trello.com/b/fO5L3lru/project-4-cover-drive
 
-> Discoveree is an online platform highlighting top YouTube cover artists covering hit songs.
-**TEAM MEMBERS:**
+> Cover Drive is an online platform highlighting top YouTube cover artists covering hit songs.
+
 
 #### How it Works:
 Top 10 songs will be aggregated using a Spotify Chart API. User will see the top 10 songs, and clicking on the song will populate objects of relevant your tube covers(artist:name, song:title, thumbnail).  Clicking on the thumbnail will play the YouTUbe Video.
