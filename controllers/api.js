@@ -1,5 +1,5 @@
 var request = require('request');
-var User = require('../models/User.js');
+var User = require('../models/user.js');
 var jwt = require('jsonwebtoken');
 var spotUrl =  "https://spotifycharts.com/api/?type=regional&country=global&recurrence=daily&date=latest&limit=10";
 var tubeUrl = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=rihanna+work+cover&key=AIzaSyDgxPMAszxU1vjw7E3QQoHLNLHLYjWXc14"  //this works on its own
