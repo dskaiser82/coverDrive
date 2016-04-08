@@ -7,3 +7,18 @@
 h5{
   text-align: right;
 }
+a{
+  background-color: #d32f2f;
+  color: white;
+}
+
+.track-name{
+  -webkit-text-stroke-width: 1px;
+   -webkit-text-shadow-color: black;
+   color: white;
+}
+.artist-name{
+  -webkit-text-stroke-width: 1px;
+   -webkit-text-shadow-color: black;
+    color: white;
+}
