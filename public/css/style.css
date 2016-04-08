@@ -13,12 +13,10 @@ a{
 }
 
 .track-name{
-  -webkit-text-stroke-width: 1px;
-   -webkit-text-shadow-color: black;
-   color: white;
+  color: white;
+  mix-blend-mode: difference;
 }
 .artist-name{
-  -webkit-text-stroke-width: 1px;
-   -webkit-text-shadow-color: black;
-    color: white;
+  color: white;
+  mix-blend-mode: difference;
 }
