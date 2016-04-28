@@ -14,9 +14,9 @@
         console.log(results)
           //we name spots and set the api object to entries.items
           //to easily bind on front-end
-          vm.spots = results.tracks
+          vm.spots = results
           vm.top10 = vm.spots.slice(0,10)
-          console.log(vm.top10)
+          console.log(vm.spots)
       }) //end function spotifyService anonymous function
 
 /////////////////////////youtube API////////////////////////////////////////////
