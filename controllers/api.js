@@ -1,7 +1,7 @@
 var request = require('request');
 var User = require('../models/user.js');
 var jwt = require('jsonwebtoken');
-var spotUrl =  "http://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&api_key=28cf53cf5d4faec6234d9cfbf1cc22dd&format=json";
+var spotUrl =  "http://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&api_key=28cf53cf5d4faec6234d9cfbf1cc22dd&format=json"; //switched to Last FM API
 var tubeUrl = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=rihanna+work+cover&key=AIzaSyDgxPMAszxU1vjw7E3QQoHLNLHLYjWXc14"  //this works on its own
 
 

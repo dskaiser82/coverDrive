@@ -57,7 +57,7 @@
                     <li ng-repeat="hits in main.top10">
                       <div><a class="num" ng-click="main.getYouTube(hits.track.artists[0].name,hits.track.name)">
                        #{{ hits.current_position }} <br><img src="{{hits.track.image.url}}"</a></div>
-                      <div class="track-name" >{{ hits.track.name }}</div>
+                      <div class="track-name" >{{ name }}</div>
                       <div class="artist-name">{{ hits.track.artists[0].name }}</div>
                     </li>
                 </ul>
