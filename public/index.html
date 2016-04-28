@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Cover Drive</title>
+    <title>Cover Drive beta</title>
 
     <!-- Materialize and CSS -->
     <link rel="stylesheet" type="text/css" href="/css/materialize.min.css">
@@ -58,7 +58,7 @@
                         <li>
                       <div><a class="num" ng-click="main.getYouTube(hits.track.artists[0].name,hits.track.name)">
                        <!-- #{{ main.tracks.track[0].lenghth }} <br><img src="{{hits.track.image.url}}"</a></div> -->
-                          #1<br><img src="{{hits.track.image.url}}"</a></div>
+                          #1<br><img src="{{main.spots.tracks.track[0].image[0].text}}"</a></div>
                       <div class="track-name" >{{ main.spots.tracks.track[0].name }}</div>
                       <div class="artist-name">{{ main.spots.tracks.track[0].artist.name }}</div>
                     </li>

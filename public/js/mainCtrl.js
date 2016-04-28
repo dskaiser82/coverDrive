@@ -31,10 +31,10 @@
         //For Clicking on spotify chart and capturing artist name+title
         vm.getYouTube = function(artist, title){
           var query = artist + "+" + title;
-          // console.log(query);
+          console.log(query);
           vm.api.search(query).success(function(results){
             vm.covers = results.items
-            // console.log(vm.covers)
+            console.log(vm.covers)
           })
         }
 
