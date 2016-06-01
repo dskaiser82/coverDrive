@@ -54,13 +54,13 @@
           <div ui-sref="artists" class="col s6">
               <h5>Top Songs</h5>
                 <ul class="chart">
-                    <!-- <li ng-repeat="hits in main.spots">  -->
-                        <li>
-                      <div><a class="num" ng-click="main.getYouTube(hits.track.artists[0].name,hits.track.name)">
+                    <li ng-repeat="hits in main.spots.tracks.track">
+                        <!-- <li> -->
+                      <div><a class="num" ng-click="main.getYouTube(hits.artists[0].name,hits.name)">
                        <!-- #{{ main.tracks.track[0].lenghth }} <br><img src="{{hits.track.image.url}}"</a></div> -->
                           #1<br><img src="{{main.spots.tracks.track[0].image[0].text}}"</a></div>
-                      <div class="track-name" >{{ main.spots.tracks.track[0].name }}</div>
-                      <div class="artist-name">{{ main.spots.tracks.track[0].artist.name }}</div>
+                      <div class="track-name" >{{ hits.name}}</div>
+                      <div class="artist-name">{{ hits.artist.name }}</div>
                     </li>
                 </ul>
             </div>
