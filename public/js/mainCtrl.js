@@ -15,7 +15,7 @@
           //we name spots and set the api object to entries.items
           //to easily bind on front-end
           vm.spots = results
-          vm.top10 = vm.spots.slice(0,10)
+          vm.top10 = vm.spots.tracks.track.slice(0,10)
           console.log(vm.spots)
       }) //end function spotifyService anonymous function
 
