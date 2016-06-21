@@ -16,6 +16,7 @@
           //to easily bind on front-end
           vm.spots = results
           vm.top10 = vm.spots.tracks.track.slice(0,10)
+          vm.position = [1,2,3,4,5,6,7,8,9,10]
           console.log(vm.spots)
       }) //end function spotifyService anonymous function
 
@@ -30,7 +31,7 @@
 
         //For Clicking on spotify chart and capturing artist name+title
         vm.getYouTube = function(artist, title){
-          var query = artist + "+" + title;
+          var query = artist + "+" + title ;
           console.log(query);
           vm.api.search(query).success(function(results){
             vm.covers = results.items

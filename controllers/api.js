@@ -70,10 +70,10 @@ module.exports = {
 
 
    var searchUrl = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q="+req.query.search+
-   "+cover%7Ccoverby+-audio+-idol&order=relevance&key=AIzaSyDgxPMAszxU1vjw7E3QQoHLNLHLYjWXc14"
-   console.log(searchUrl)
+   "+cover&key=AIzaSyDgxPMAszxU1vjw7E3QQoHLNLHLYjWXc14"
+   console.log("Danny")
    request(searchUrl, function(err, response, body){
-     console.log(body)
+     console.log(searchUrl)
      res.json(JSON.parse(body))
    })
  },

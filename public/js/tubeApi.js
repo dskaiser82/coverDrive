@@ -22,10 +22,10 @@
         }
 
         function search(query){
-          console.log("yyyesssss")
+
           return $http.get("/api/youtube?search="+query)
         }
-
+      console.log("yyyesssss")
       } //end function
 
 
