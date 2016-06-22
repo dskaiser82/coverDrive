@@ -55,7 +55,7 @@
               <h5>Top Songs</h5>
                 <ul class="chart">
                     <li ng-repeat="hits in main.top10">
-                               <div><a class="num" ng-click="main.getYouTube(hits.name,hits.artists[0].name)">
+                               <div><a class="num" ng-click="main.getYouTube(hits.artist.name,hits.name)">
                       <!-- <div><a class="num" ng-click="main.getYouTube(hits.artists[0].name,hits.name)"> -->
                        <!-- #{{ main.tracks.track[0].lenghth }} <br><img src="{{hits.track.image.url}}"</a></div> -->
                         <div >#{{hits.length}}</div><br><img src='{{hits.image[0]["#"+"text"]}}'</a></div>
