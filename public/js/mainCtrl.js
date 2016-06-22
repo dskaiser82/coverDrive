@@ -29,13 +29,13 @@
             vm.covers = results.items
         }) //end function spotifyService anonymous function
 
-        //For Clicking on spotify chart and capturing artist name+title
+        //For Clicking on spotify chart and capturing artist name+title  ==Dan Look Here It's Getting Song title but not artist name
         vm.getYouTube = function(artist, title){
           var query = artist + "+" + title ;
           console.log(query);
           vm.api.search(query).success(function(results){
             vm.covers = results.items
-            console.log(vm.covers)
+            console.log("Hi Danny")
           })
         }
 

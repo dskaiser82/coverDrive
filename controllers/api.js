@@ -68,16 +68,16 @@ module.exports = {
  showTube: function(req,res){
    req.query.search
 
-
+//This CONTROLS YouTube URL!!!
    var searchUrl = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q="+req.query.search+
-   "+cover&key=AIzaSyDgxPMAszxU1vjw7E3QQoHLNLHLYjWXc14"
-   console.log("Danny")
+   "+cover%7Ccoverby&order=relevance&key=AIzaSyDgxPMAszxU1vjw7E3QQoHLNLHLYjWXc14"
+   console.log(searchUrl)
    request(searchUrl, function(err, response, body){
-     console.log(searchUrl)
+    //  console.log(body)
      res.json(JSON.parse(body))
    })
  },
-//+-presents+-vevo+-coverhook+-pranks+-parody+-amazing+-shazam+-lyrics+-playlist
+
 
 
 //============================Authentication===================================

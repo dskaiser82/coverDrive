@@ -20,7 +20,7 @@
           console.log("Getting Youtube Charts")
           return $http.get('api/youtube')  //+ query)
         }
-
+        //This may be how we get query from Spotify Chart to Youtube page
         function search(query){
 
           return $http.get("/api/youtube?search="+query)
