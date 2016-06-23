@@ -70,7 +70,7 @@ module.exports = {
 
 //This CONTROLS YouTube URL!!!
    var searchUrl = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q="+req.query.search+
-   "+cover%7Ccoverby&order=relevance&key=AIzaSyDgxPMAszxU1vjw7E3QQoHLNLHLYjWXc14"
+   "+cover%7Ccoverby+-vevo&order=relevance&key=AIzaSyDgxPMAszxU1vjw7E3QQoHLNLHLYjWXc14"
    console.log(searchUrl)
    request(searchUrl, function(err, response, body){
     //  console.log(body)
