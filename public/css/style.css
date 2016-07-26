@@ -10,20 +10,23 @@
 }
 h5{
   text-align: right;
+  color: #7e7e7e;
 }
 .num{
   background-color: #d32f2f;
   color: white;
+  width:18px;
+  margin-left: 95%;
 }
 .button{
   background-color: : #d32f2f;
 }
 
 .track-name{
-  color: white;
-  mix-blend-mode: difference;
+  color: #7e7e7e
+  /*mix-blend-mode: overlay;*/
 }
 .artist-name{
-  color: white;
-  mix-blend-mode: difference;
+  color: #bdbdbd;
+  /*mix-blend-mode: difference;*/
 }
